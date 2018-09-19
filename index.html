@@ -5,33 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/index.css">
+
+    <title>Trivia Game</title>
 </head>
 
 <body>
+    <audio id="successAudio">
+        <source src="./assets/sounds/success.mp3" type="audio/mpeg">
+    </audio>
 
-    <div id="wrapper">
+    <audio id="wrongKeyAudio">
+        <source src="./assets/sounds/wrongKey.wav" type="audio/wav">
+    </audio>
+
+    <div id="title">
+
+        test
+
+    </div>
+
+    <div id="wrapper" class="container-fluid">
 
         <div id="trivia">
 
-
-            <p id='timer'></p>
+            <p id='timer'> Time's Up </p>
 
             <h1 id='question'></h1>
+            <br>
             <p class='options' id='option0'></p>
+            <br>
             <p class='options' id='option1'></p>
+            <br>
             <p class='options' id='option2'></p>
+            <br>
             <p class='options' id='option3'></p>
-
+            <br>
             <h3 id='status'></h3>
-
 
         </div>
 
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+        <script src="./assets/javascript/index.js"></script>
+
+
+
+
+
+
+
     </div>
-    <script src="./assets/javascript/index.js"></script>
+
+    <footer id="footer">
+
+        Tony Gonzales @ 2018
+
+    </footer>
+
 </body>
 
 </html>

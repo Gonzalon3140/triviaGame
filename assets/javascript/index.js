@@ -4,20 +4,22 @@ $(document).ready(function () {
     let correct = 0;
     let incorrect = 0;
     let questionNumber = 0;
+
+
     let questions = [{
             question: 'What is the name of the actor who played " Sam Rothstein" in the movie Casino?',
             correctAnswer: 'Robert De Niro',
             options: ['Robert De Niro', 'Woody Harrelson', 'Colin Firth', 'Keanu Reeves'],
         },
         {
-            question: 'When Was Back to the Future released into the theater ?',
+            question: 'In what year was Back to the Future released into theater\'s?',
             correctAnswer: '1985',
             options: ['1985', '1984', '1989', '1999'],
         },
         {
-            question: 'Name four popular movies from the 1980s?',
-            correctAnswer: 'Goonies',
-            options: ['Indiana Jones', 'Goonies', 'E.T', 'Top Gun'],
+            question: 'Name the film that has grossed the most profit?',
+            correctAnswer: 'Gone with the Wind',
+            options: ['Avatar', 'Gone with the Wind', 'Titanic', 'Star Wars'],
         },
         {
             question: 'How did Jack Dawson win his Ticket aboard the Titanic?',
@@ -30,24 +32,24 @@ $(document).ready(function () {
             options: ['Sauruman', 'Balrog', 'Sauron', 'Feanor'],
         },
         {
-            question: 'Name four Movies Leonardo De Caprio has played in?',
+            question: 'Name the Movie Leonardo Di Caprio played in?',
             correctAnswer: 'Inception',
-            options: ['Blood Diamonds', 'Inception', 'Aviator', 'Whats Eating Gilbert Grape'],
+            options: ['The lincoln lawyer', 'Lost In Space', 'Dazed and Confused', 'Whats Eating Gilbert Grape'],
         },
         {
-            question: 'Name a movie that Tom Hanks was in ?',
+            question: 'Name a movie that Tom Hanks has starred in ?',
             correctAnswer: 'Joe Vs the Volcano',
-            options: ['Big', 'Joe Vs the Volcano', 'Sleepless in Seattle', 'Forrest Gump'],
+            options: ['Patriot Games', 'The Free State of Jones', ' K-9', 'Joe Vs the Volcano'],
         },
         {
-            question: '?',
-            correctAnswer: 'Robert Dinero',
-            options: ['Robert Dinero', 'Woody Harrelson', 'Colin Firth', 'Keanu Reeves'],
+            question: 'What was the name of the Character Played by Keanu Reeves in the movie The Matrix?',
+            correctAnswer: 'Neo',
+            options: ['Jack Traven', 'Johnny Utah ', 'Neo', 'John Wick'],
         },
         {
-            question: 'Who is the main character in the movie Casino?',
-            correctAnswer: 'Robert Dinero',
-            options: ['Robert Dinero', 'Woody Harrelson', 'Colin Firth', 'Keanu Reeves'],
+            question: 'What Movie is considered to be a "Spaghetti Western"?',
+            correctAnswer: 'For a Few Dollars More',
+            options: ['The Ballad of Little Jo ', 'Cat Ballou', 'The Magnificent Seven', 'For a Few Dollars More'],
         },
     ];
 
@@ -68,7 +70,7 @@ $(document).ready(function () {
             clearInterval(timeRemainingInterval)
         }
         timeRemainingInterval = setInterval(function () {
-            if (timeRemaining < 0) {
+            if (timeRemaining <= 0) {
                 alert('times Up');
                 questionNumber++
                 incorrect++
@@ -77,7 +79,7 @@ $(document).ready(function () {
             }
             timeRemaining--
             $("#timer").text(timeRemaining)
-        }, 1000)
+        }, 9000)
     }
 
     function updateDom() {
