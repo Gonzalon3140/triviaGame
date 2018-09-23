@@ -1,85 +1,112 @@
 body {
-    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: bolder;
+    position: absolute;
 }
 
 #title {
+    height: 60px;
+    padding: 8px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    text-align: center;
     border: 1px solid black;
+    background-image: url(../Images/cinema-festival-poster_1284-8533.jpg);
 }
+
 
 #wrapper {
     padding: 10px;
     border: 1px solid black;
-    background-image: url(../Images/pexels-photo-218983.jpeg);
+    background-image: url(../Images/curls.png);
+}
+
+.content {
+    flex: 1 0 auto;
 }
 
 #timer {
     width: 20%;
-    height: 75px;
-    padding: 20px;
+    height: 50px;
+    padding: 8px;
+    margin-top: 20px;
     text-align: center;
     border: 1px solid black;
-    background-color: #bcba87;
+    background-image: url(../Images/concrete-texture.png);
 }
 
 #question {
-    padding: 10px;
-    margin: 10px 0 0 0;
-    font-size: 15px;
+    padding: 20px;
     height: 75px;
-    text-align: left;
-    background-color: #bcba87;
+    margin: 20px 6px 6px 6px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
     border: 1px solid black;
+    background-image: url(../Images/concrete-texture.png);
 }
 
-#option0 {
-
-    width: 60%;
+.options,
+#option0,
+#option1,
+#option2,
+#option3,
+#startGame {
+    width: 40%;
     height: 50px;
-    margin: auto;
-    padding: 5px;
-    background-color: #bcba87;
+    padding: 10px;
+    margin: 0 0 0 0;
+    font-size: 20px;
+    margin-top: 20px;
     border: 1px solid black;
-}
-
-#option1 {
-    width: 60%;
-    height: 50px;
-    margin: auto;
-    padding: 5px;
-    background-color: #bcba87;
-    border: 1px solid black;
-}
-
-#option2 {
-    width: 60%;
-    height: 60px;
-    margin: auto;
-    padding: 5px;
-    background-color: #bcba87;
-    border: 1px solid black;
-}
-
-#option3 {
-    width: 60%;
-    height: 60px;
-    margin: auto;
-    padding: 5px;
-    background-color: #bcba87;
-    border: 1px solid black;
+    background-image: url(../Images/concrete-texture.png);
 }
 
 #status {
-    width: 60%;
+    width: 30%;
     height: 60px;
     margin: auto;
     padding: 5px;
-    background-color: #bcba87;
+    right: 50px;
+    position: fixed;
     border: 1px solid black;
+    background-image: url(../Images/concrete-texture.png);
 }
 
-#footer {
-    height: 75px;
+#startGame {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.footer {
+    width: 100%;
+    height: 65px;
     padding: 10px;
-    background-color: #bcba87;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
     border: 1px solid black;
+    background-image: url(../Images/concrete-texture.png);
+}
+
+.footer1 {
+    font-size: 20px;
+    color: black;
+    font-weight: bolder;
+}
+
+.hide {
+    visibility: hidden;
 }

@@ -9,22 +9,22 @@ $(document).ready(function () {
     let questions = [{
             question: 'What is the name of the actor who played " Sam Rothstein" in the movie Casino?',
             correctAnswer: 'Robert De Niro',
-            options: ['Robert De Niro', 'Woody Harrelson', 'Colin Firth', 'Keanu Reeves'],
+            options: ['Woody Harrelson', 'Robert De Niro', 'Colin Firth', 'Keanu Reeves'],
         },
         {
             question: 'In what year was Back to the Future released into theater\'s?',
             correctAnswer: '1985',
-            options: ['1985', '1984', '1989', '1999'],
+            options: ['1987', '1984', '1985', '1981'],
         },
         {
-            question: 'Name the film that has grossed the most profit?',
+            question: 'Name the film that has grossed the most profit ever?',
             correctAnswer: 'Gone with the Wind',
             options: ['Avatar', 'Gone with the Wind', 'Titanic', 'Star Wars'],
         },
         {
-            question: 'How did Jack Dawson win his Ticket aboard the Titanic?',
+            question: 'How did Jack Dawson win his ticket aboard the Titanic?',
             correctAnswer: 'A poker game',
-            options: ['A car race', 'A poker game', 'wrestling match', 'a drinking contest'],
+            options: ['A poker game', 'A car race', 'wrestling match', 'a drinking contest'],
         },
         {
             question: 'What is the name of the Dark Lord in Lord of the Rings?',
@@ -32,22 +32,22 @@ $(document).ready(function () {
             options: ['Sauruman', 'Balrog', 'Sauron', 'Feanor'],
         },
         {
-            question: 'Name the Movie Leonardo Di Caprio played in?',
-            correctAnswer: 'Inception',
-            options: ['The lincoln lawyer', 'Lost In Space', 'Dazed and Confused', 'Whats Eating Gilbert Grape'],
+            question: 'Name a movie that Leonardo Di Caprio played in?',
+            correctAnswer: 'What\'s Eating Gilbert Grape',
+            options: ['The Lincoln Lawyer', 'Lost In Space', 'Dazed and Confused', 'What\'s Eating Gilbert Grape'],
         },
         {
             question: 'Name a movie that Tom Hanks has starred in ?',
             correctAnswer: 'Joe Vs the Volcano',
-            options: ['Patriot Games', 'The Free State of Jones', ' K-9', 'Joe Vs the Volcano'],
+            options: ['Joe Vs the Volcano', 'The Free State of Jones', ' K-9', 'Patriot Games'],
         },
         {
-            question: 'What was the name of the Character Played by Keanu Reeves in the movie The Matrix?',
+            question: 'What was the name of the Character played by Keanu Reeves in the movie The Matrix?',
             correctAnswer: 'Neo',
             options: ['Jack Traven', 'Johnny Utah ', 'Neo', 'John Wick'],
         },
         {
-            question: 'What Movie is considered to be a "Spaghetti Western"?',
+            question: 'What Movie is considered to be a "Spaghetti Western" movie?',
             correctAnswer: 'For a Few Dollars More',
             options: ['The Ballad of Little Jo ', 'Cat Ballou', 'The Magnificent Seven', 'For a Few Dollars More'],
         },
@@ -64,14 +64,14 @@ $(document).ready(function () {
     }
 
     function resetInterval() {
-        timeRemaining = 10;
+        timeRemaining = 15;
         $("#timer").text(timeRemaining)
         if (timeRemainingInterval) {
             clearInterval(timeRemainingInterval)
         }
         timeRemainingInterval = setInterval(function () {
             if (timeRemaining <= 0) {
-                alert('times Up');
+                alert('Times Up');
                 questionNumber++
                 incorrect++
                 checkGameStatus()
@@ -79,7 +79,7 @@ $(document).ready(function () {
             }
             timeRemaining--
             $("#timer").text(timeRemaining)
-        }, 9000)
+        }, 2000);
     }
 
     function updateDom() {
@@ -93,7 +93,7 @@ $(document).ready(function () {
 
     function checkGameStatus() {
         if (questionNumber > questions.length - 1) {
-            $("#status").text(" You Scored " + correct + 'correct')
+            $("#status").text(" You Scored " + correct + 'Correct')
             startGame()
             return
         } else {
@@ -105,13 +105,13 @@ $(document).ready(function () {
         console.log(this.innerText);
         console.log(questions[questionNumber].correctAnswer)
         if (questions[questionNumber].correctAnswer === this.innerText) {
-            $("#status").text("correct")
+            alert("you are correct")
             questionNumber++
             correct++
             checkGameStatus()
             updateDom()
         } else {
-            alert('wrong');
+            alert('Sorry Wrong Answer');
             questionNumber++
             incorrect++
             checkGameStatus()
@@ -121,4 +121,9 @@ $(document).ready(function () {
 
 
     startGame()
+
+    $('#startGame').on('click', function () {
+        $('.hide').css('visibility', "visible");
+        startGame();
+    })
 });
